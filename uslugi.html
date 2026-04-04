@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi | MiamVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #f16ad4; 
+            --accent-glow: rgba(168, 9, 134, 0.4);
+            --bg-gradient: linear-gradient(135deg, #050106 0%, #1a0014 40%, #f576d9 100%);
+            --glass: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(248, 152, 227, 0.644);
+            --text-main: #ffffff;
+            --text-dim: #d1c4d4;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding-top: 100px; /* Miejsce na fixed nav */
+        }
+
+        /* --- Nawigacja (taka sama jak na głównej) --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: rgba(5, 1, 6, 0.9);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .main-logo { height: 40px; filter: drop-shadow(0 0 8px var(--accent)); }
+        .logo-text { font-size: 1.5rem; font-weight: 900; color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 25px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; }
+
+        /* --- Kontener Usług --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 8%;
+        }
+
+        .header-section { text-align: center; margin-bottom: 60px; }
+        .header-section h1 { font-size: 3rem; margin-bottom: 20px; text-shadow: 0 0 20px var(--accent-glow); }
+        .header-section span { color: var(--accent); }
+
+        .service-detail {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .service-detail:hover {
+            border-color: var(--accent);
+            transform: scale(1.01);
+            background: rgba(255, 0, 200, 0.03);
+        }
+
+        .service-detail h2 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .service-detail ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .service-detail ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-dim);
+        }
+
+        .service-detail ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .back-btn {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo-container">
+            <img src="logo.png" alt="MiamVE Logo" class="main-logo">
+            <span class="logo-text">MiamVE</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="glowna.html">Home</a></li>
+            <li><a href="uslugi.html" style="color: var(--accent);">Usługi</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="header-section">
+            <h1>Nasza <span>Oferta</span></h1>
+            <p>Sprawdź, co MiamVE może przygotować dla Ciebie.</p>
+        </section>
+
+        <div class="service-detail">
+            <h2>Web Development</h2>
+            <p>Tworzymy nowoczesne strony internetowe, sklepy, blogi oraz podobne!</p>
+            <ul>
+                <li>Działa na każdym urządzeniu</li>
+                <li>Optymalizacja szybkości ładowania</li>
+                <li>Czysty oraz estetycznie prowadzony kod</li>
+                <li>Szybkie i niezawodne działanie stron</li>
+                <li>Profesjonalny wygląd i funkcjonalność</li>
+            </ul>
+        </div>
+
+        <div class="service-detail">
+            <h2>Software Development</h2>
+            <p>Tworzymy profesjonalne programy oraz aplikacje</p>
+            <ul>
+                <li>Pełna funkcjonalność i wydajność</li>
+                <li>Działa na każdym urządzeniu</li>
+                <li>Nieograniczone możliwości rozwoju</li>
+                <li>Wsparcie techniczne i aktualizacje</li>
+            </ul>
+        </div>
+
+        <div class="service-detail">
+            <h2>Interfejsy UI/UX</h2>
+            <p>Projektujemy interfejsy, które cieszą oko</p>
+            <ul>
+                <li>Makiety stron i aplikacji</li>
+                <li>Dobór kolorystyki i typografii</li>
+                <li>Efekty wizualne</li>
+                <li>Pełna interaktywność</li>
+            </ul>
+        </div>
+
+        <a href="glowna.html" class="back-btn">← Wróć do strony głównej</a>
+    </div>
+
+</body>
+</html>

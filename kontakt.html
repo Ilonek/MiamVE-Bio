@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | MiamVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Kopiujemy zmienne i bazę stylu z index.html */
+        :root {
+            --accent: #ff7ae2; 
+            --accent-glow: rgba(95, 7, 76, 0.342);
+            --bg-gradient: linear-gradient(135deg, #050106 0%, #000000 30%, #ff79e0 100%);
+            --glass: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 143, 231, 0.555);
+            --text-main: #ffffff;
+            --text-dim: #d1c4d4;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .contact-card {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 0 40px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: var(--accent); text-shadow: 0 0 15px var(--accent-glow); margin-bottom: 20px; }
+        p { color: var(--text-dim); margin-bottom: 30px; }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--accent);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover { color: var(--accent); }
+
+        /* Prosta lista kontaktowa */
+        .contact-methods {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .contact-methods li {
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 3px solid var(--accent);
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-card">
+        <h1>Skontaktuj się</h1>
+        <p>Chciałbyś abyśmy przygotowali dla ciebie stronę internetową lub aplikację? Napisz do nas!</p>
+        
+        <ul class="contact-methods">
+            <li>📧 Email: <strong>miamve@proton.me</strong></li>
+            <li>💬 Discord: <strong></strong>https://discord.gg/MdK7EwYAED</li>
+            <li>💎 Zynced: <strong>MiamVE</strong></li>
+        </ul>
+
+        <a href="glowna.html" class="back-btn">← Powrót do strony głównej</a>
+    </div>
+
+</body>
+</html>
