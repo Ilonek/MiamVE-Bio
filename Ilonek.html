@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilonek</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000000;
+      color: #00fff2;
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      overflow-y: auto; 
+      overflow-x: hidden; 
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000000; 
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #00fff2; 
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00cccc; 
+    }
+
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #00fff2 #000000;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://wallpaperaccess.com/full/138618.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(252, 252, 252, 0.055); 
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      padding: 2rem;
+      padding-bottom: 4rem; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; 
+      min-height: 100vh;
+    }
+
+    .glass {
+      background: #f1f1f121;
+      backdrop-filter: blur(20px);
+      border: 1px solid #000000fd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- bck -->
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <div class="max-w-md w-full text-center space-y-10">
+
+      <!-- logo -->
+      <div class="mx-auto w-36 h-36 rounded-3xl overflow-hidden border-4 border-white/30 shadow-2xl">
+        <img src="https://i.pinimg.com/236x/94/ee/47/94ee47b8b5800cd73f08c10fde083930.jpg" 
+             alt="VOIDFORGE" 
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- MiamVE -->
+      <div>
+        <h1 class="text-6xl font-bold tracking-tighter drop-shadow-lg">Ilonek</h1>
+        <p class="text-2xl text-blue/90 mt-2"> MiamVE member </p>
+      </div>
+
+      <!-- Bios -->
+      <div class="glass p-8 rounded-3xl text-left text-[15.5px] leading-relaxed">
+       Web & Software Developer, mam 3 letnie doświadczenie w kodowaniu. Zajmuje sie rowniez testami penetracyjnymi.
+      </div>
+
+      <div class="glass p-6 rounded-3xl text-left">
+        <h3 class="text-lg font-semibold mb-4 text-white/90">Języki:</h3>
+        <div class="flex flex-wrap gap-3">
+          <div class="group relative bg-black/40 p-3 rounded-xl border border-white/10 hover:border-yellow-400/50 transition-all cursor-pointer">
+            <i class="fa-brands fa-python text-2xl text-yellow-400 group-hover:text-yellow-300"></i>
+          </div>
+          <div class="group relative bg-black/40 p-3 rounded-xl border border-white/10 hover:border-yellow-300/50 transition-all cursor-pointer">
+            <i class="fa-brands fa-js text-2xl text-yellow-300 group-hover:text-yellow-200"></i>
+          </div>
+          <div class="group relative bg-black/40 p-3 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all cursor-pointer">
+            <i class="fa-solid fa-code text-2xl text-blue-500 group-hover:text-blue-400"></i>
+          </div>
+          <div class="group relative bg-black/40 p-3 rounded-xl border border-white/10 hover:border-orange-400/50 transition-all cursor-pointer">
+            <i class="fa-solid fa-cube text-2xl text-orange-400 group-hover:text-orange-300"></i>
+          </div>
+          <div class="group relative bg-black/40 p-3 rounded-xl border border-white/10 hover:border-orange-600/50 transition-all cursor-pointer">
+            <i class="fa-brands fa-html5 text-2xl text-orange-600 group-hover:text-orange-500"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass p-4 rounded-2xl flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+          <span class="text-sm text-gray-300">Aktualnie: <span class="text-cyan-400 font-medium">Koduje</span></span>
+        </div>
+        <i class="fa-solid fa-terminal text-gray-500"></i>
+      </div>
+
+      <a href="https://github.com/twoj-nick" target="_blank" class="glass block px-7 py-5 rounded-2xl flex items-center justify-between hover:bg-white/10 transition-all">
+        <span class="flex items-center gap-4">
+          <i class="fa-brands fa-github text-2xl text-white"></i>
+          <span>GitHub</span>
+        </span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-white/50"></i>
+      </a>
+      <div class="space-y-4">
+<a href="https://discord.com/users/1236587790314110991" target="_blank" class="glass block px-7 py-5 rounded-2xl flex items-center justify-between hover:bg-white/10 transition-all">
+          <span class="flex items-center gap-4">
+            <i class="fa-brands fa-discord text-2xl text-indigo-400"></i>
+            <span>Discord</span>
+          </span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+        <a href="https://zynced.app/app/ilonek" target="_blank" 
+   class="glass block px-7 py-5 rounded-2xl flex items-center justify-between hover:bg-white/10 transition-all">
+  <span class="flex items-center gap-4">
+    <i class="fa-solid fa-globe text-2xl text-cyan-400"></i>
+    <span>Zynced App</span>
+  </span>
+  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+      </div>
+
+      <div class="text-xs text-white/50 pt-6">
+        © 2026 MiamVE
+      </div>
+    </div>
+    <a href="zespol.html" class="back-btn">← Wróć</a>
+  </div>
+</body>
+</html>
+
+<!--
+     ███╗   ███╗██╗ █████╗ ███╗   ███╗██╗   ██╗███████╗
+     ████╗ ████║██║██╔══██╗████╗ ████║██║   ██║██╔════╝
+     ██╔████╔██║██║███████║██╔████╔██║██║   ██║█████╗  
+     ██║╚██╔╝██║██║██╔══██║██║╚██╔╝██║╚██╗ ██╔╝██╔══╝  
+     ██║ ╚═╝ ██║██║██║  ██║██║ ╚═╝ ██║ ╚████╔╝ ███████╗
+     ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═══╝  ╚══════╝
+           New era of web & software development
+ -->

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiamVE • Dev Team</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #ff06de;
+      font-family: 'Inter', system-ui, sans-serif;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ddfe6d6c-9f0f-4447-a495-b7c385c54cfd/dfd60g3-5c93400f-e663-4949-a048-946a899db365.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9kZGZlNmQ2Yy05ZjBmLTQ0NDctYTQ5NS1iN2MzODVjNTRjZmQvZGZkNjBnMy01YzkzNDAwZi1lNjYzLTQ5NDktYTA0OC05NDZhODk5ZGIzNjUuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.PYgtMYVVu--6jj1Oh4IOkYLGU6XH1MHzDdk1SpSkwds'); /* <--- tu wstaw link */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55); /* ciemne przyciemnienie */
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .glass {
+      background: #0a0a0a04;
+      backdrop-filter: blur(20px);
+      border: 1px solid #ffffff26;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Twoje tło -->
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="content">
+    <div class="max-w-md w-full text-center space-y-10">
+
+      <!-- Logo / Avatar -->
+      <div class="mx-auto w-36 h-36 rounded-3xl overflow-hidden border-4 border-white/30 shadow-2xl">
+        <img src="https://media.discordapp.net/attachments/1478482034828775507/1489549980028112966/Picsart_26-04-03_10-59-33-733.png?ex=69d0d305&is=69cf8185&hm=03f21d3c1e06ac65c337a738dc31c909483e5d17c01602fc76a672a5c88c95e0&=&format=webp&quality=lossless&width=591&height=572" 
+             alt="VOIDFORGE" 
+             class="w-full h-full object-cover">
+      </div>
+
+      <!-- Nazwa zespołu -->
+      <div>
+        <h1 class="text-6xl font-bold tracking-tighter drop-shadow-lg">MiamVE</h1>
+        <p class="text-2xl text-white/90 mt-2">Web Dev Team</p>
+      </div>
+
+      <!-- Bio -->
+      <div class="glass p-8 rounded-3xl text-left text-[15.5px] leading-relaxed">
+        Mały zespół developerów stron internetowych oraz mniejszych aplikacji. Specjalizujemy się w profesjonalnym oraz estetycznym pisaniu kodu w językach html, CSS, JS, oraz python.
+      </div>
+
+      <!-- Linki -->
+      <div class="space-y-4">
+            <a href="https://discord.gg/MdK7EwYAED" target="_blank" 
+   class="glass block px-7 py-5 rounded-2xl flex items-center justify-between hover:bg-white/10 transition-all">
+  <span class="flex items-center gap-4">
+    <i class="fa-brands fa-discord text-2xl text-indigo-400"></i>
+    <span>Discord Team</span>
+  </span>
+  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+</a>
+      </div>
+
+      <div class="text-xs text-white/50 pt-6">
+        © 2026 MiamVE
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!--
+     ███╗   ███╗██╗ █████╗ ███╗   ███╗██╗   ██╗███████╗
+     ████╗ ████║██║██╔══██╗████╗ ████║██║   ██║██╔════╝
+     ██╔████╔██║██║███████║██╔████╔██║██║   ██║█████╗  
+     ██║╚██╔╝██║██║██╔══██║██║╚██╔╝██║╚██╗ ██╔╝██╔══╝  
+     ██║ ╚═╝ ██║██║██║  ██║██║ ╚═╝ ██║ ╚████╔╝ ███████╗
+     ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═══╝  ╚══════╝
+           New era of web & software development
+ -->

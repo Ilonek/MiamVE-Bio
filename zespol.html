@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zespół | MiamVE</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #ffffff;
+    --glass: rgba(236, 236, 236, 0.945);
+    --border: rgba(0,0,0,0.08);
+    --text: #111;
+    --text-dim: #666;
+    --accent: #ad844e;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 50% -20%, #ad844e, #ffffff 100%);
+    color: var(--text);
+    line-height: 1.6;
+    padding-top: 100px;
+}
+
+nav {
+    position: fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter: blur(20px);
+    background: #866b4a00;
+    border-bottom:1px solid var(--border);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.main-logo {
+    height: 40px;
+    filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.logo-text {
+    font-weight:800;
+    font-size:1.55rem;
+    letter-spacing:-0.5px;
+    color: var(--accent);
+}
+
+.nav-links {
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a {
+    text-decoration:none;
+    color:var(--text-dim);
+    font-weight:500;
+}
+
+.nav-links a:hover,
+.nav-links a[style*="accent"] {
+    color:var(--text);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 8% 80px;
+}
+
+.header-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.header-section h1 {
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+.team-card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 40px 30px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 25px 50px rgba(173, 132, 78, 0.15);
+}
+
+.team-card img {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent);
+    margin-bottom: 25px;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.team-card p {
+    color: var(--text-dim);
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-size: 1.02rem;
+}
+
+.team-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 28px;
+    background: #000000;
+    color: white;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.98rem;
+    transition: all 0.3s ease;
+}
+
+.team-btn:hover {
+    background: #222;
+    transform: translateX(6px);
+    gap: 14px;
+}
+
+.team-btn span {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+}
+
+.team-btn:hover span {
+    transform: translateX(5px);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-container">
+        <img src="https://media.discordapp.net/attachments/1478482034828775507/1490286858771632218/miavelogoczarne.png?ex=69d3814b&is=69d22fcb&hm=b2fc1130eb65e7a4c03170c0734075669cbfdf6da67bb48b4d99b6fe529f21d5&=&format=webp&quality=lossless" 
+             alt="MiamVE Logo" 
+             class="main-logo">
+        <span class="logo-text">MiamVE</span>
+    </a>
+<ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="uslugi.html">Usługi</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="zespol.html">Zespół</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <section class="header-section">
+        <h1>Poznaj nasz zespół</h1>
+    </section>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/236x/94/ee/47/94ee47b8b5800cd73f08c10fde083930.jpg" alt="Ilonek">
+            <h3>Ilonek</h3>
+            <p>Founder & Lead Developer</p>
+            <a href="Ilonek.html" class="team-btn">
+                Zobacz profil <span>→</span>
+            </a>
+        </div>
+
+        <div class="team-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq2DwXxrtMm9OxKOxbLHAiv3_CHM-2hwP4Dg&s" alt="Mati">
+            <h3>Mati</h3>
+            <p>Web Developer & UX Designer</p>
+            <a href="mati.html" class="team-btn">
+                Zobacz profil <span>→</span>
+            </a>
+        </div>
+        <div class="team-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlevgpaFB6_r_VXUU-n1TKMFstAPvZBRDZYg&s" alt="Ratix">
+            <h3>Ratix</h3>
+            <p>Web & Software Developer</p>
+            <a href="ratix.html" class="team-btn">
+                Zobacz profil <span>→</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
+
+<!--
+     ███╗   ███╗██╗ █████╗ ███╗   ███╗██╗   ██╗███████╗
+     ████╗ ████║██║██╔══██╗████╗ ████║██║   ██║██╔════╝
+     ██╔████╔██║██║███████║██╔████╔██║██║   ██║█████╗  
+     ██║╚██╔╝██║██║██╔══██║██║╚██╔╝██║╚██╗ ██╔╝██╔══╝  
+     ██║ ╚═╝ ██║██║██║  ██║██║ ╚═╝ ██║ ╚████╔╝ ███████╗
+     ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═══╝  ╚══════╝
+           New era of web & software development
+ -->

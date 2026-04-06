@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | MiamVE</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #ffffff;
+    --glass: rgba(255, 255, 255, 0.322);
+    --border: rgba(0,0,0,0.08);
+    --text: #111;
+    --text-dim: #666;
+    --accent: #ad844e;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 50% -20%, #ad844e, #fcfcfc 100%);
+    color: var(--text);
+    line-height: 1.6;
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+/* navsy */
+nav {
+    position: fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter: blur(20px);
+    background: #866b4a00;
+    border-bottom:1px solid var(--border);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.main-logo {
+    height: 40px;
+    filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.logo-text {
+    font-weight:800;
+    font-size:1.55rem;
+    letter-spacing:-0.5px;
+    color: var(--accent);
+}
+
+.nav-links {
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a {
+    text-decoration:none;
+    color:var(--text-dim);
+    font-weight:500;
+}
+
+.nav-links a:hover,
+.nav-links a[style*="accent"] {
+    color:var(--text);
+}
+
+/* cnt */
+.container {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contact-card {
+    background: var(--glass);
+    backdrop-filter: blur(22px);
+    border: 1px solid var(--border);
+    border-radius: 32px;
+    padding: 55px 45px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(173, 132, 78, 0.12);
+}
+
+.contact-card h1 {
+    font-size: 2.55rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 22px;
+    letter-spacing: -0.8px;
+}
+
+.contact-card p {
+    color: var(--text-dim);
+    margin-bottom: 40px;
+    font-size: 1.08rem;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-methods {
+    list-style: none;
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 35px;
+}
+
+.contact-methods li {
+    margin: 18px 0;
+    padding: 16px 22px;
+    background: rgba(255, 255, 255, 0.75);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+.contact-methods li strong {
+    color: var(--accent);
+}
+
+/* back */
+.back-btn {
+    display: inline-block;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    transform: translateX(-4px);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-container">
+        <img src="https://media.discordapp.net/attachments/1478482034828775507/1490286858771632218/miavelogoczarne.png?ex=69d3814b&is=69d22fcb&hm=b2fc1130eb65e7a4c03170c0734075669cbfdf6da67bb48b4d99b6fe529f21d5&=&format=webp&quality=lossless" 
+             alt="MiamVE Logo" 
+             class="main-logo">
+        <span class="logo-text">MiamVE</span>
+    </a>
+<ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="uslugi.html">Usługi</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="zespol.html">Zespół</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="contact-card">
+        <h1>Skontaktuj się</h1>
+        <p>Chciałbyś abyśmy przygotowali dla Ciebie stronę internetową lub aplikację? Napisz do nas!</p>
+        
+        <ul class="contact-methods">
+            <li>📧 Email: <strong>miamve@proton.me</strong></li>
+            <li>💬 Discord: <strong>https://discord.gg/MdK7EwYAED</strong></li>
+            <li>💎 Zynced: <strong>MiamVE</strong></li>
+        </ul>
+
+        <a href="index.html" class="back-btn">← Powrót do strony głównej</a>
+    </div>
+</div>
+
+</body>
+</html>
+
+<!--
+     ███╗   ███╗██╗ █████╗ ███╗   ███╗██╗   ██╗███████╗
+     ████╗ ████║██║██╔══██╗████╗ ████║██║   ██║██╔════╝
+     ██╔████╔██║██║███████║██╔████╔██║██║   ██║█████╗  
+     ██║╚██╔╝██║██║██╔══██║██║╚██╔╝██║╚██╗ ██╔╝██╔══╝  
+     ██║ ╚═╝ ██║██║██║  ██║██║ ╚═╝ ██║ ╚████╔╝ ███████╗
+     ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═══╝  ╚══════╝
+           New era of web & software development
+ -->

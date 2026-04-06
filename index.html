@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiamVE | Web & Software Development</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #ffffff;
+    --glass: rgba(255, 255, 255, 0.945);
+    --border: rgba(0,0,0,0.08);
+    --text: #111;
+    --text-dim: #666;
+    --accent: #ad844e;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 50% -20%, #ad844e, #ffffff 100%);
+    color: var(--text);
+}
+
+/* navs */
+nav {
+    position: fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    backdrop-filter: blur(20px);
+    background: #866b4a00;
+    border-bottom:1px solid var(--border);
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.main-logo {
+    height: 40px;
+    filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.logo-text {
+    font-weight:800;
+    font-size:1.55rem;
+    letter-spacing:-0.5px;
+    color: var(--accent);
+}
+
+.nav-links {
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a {
+    text-decoration:none;
+    color:var(--text-dim);
+    font-weight:500;
+}
+
+.nav-links a:hover {
+    color:var(--text);
+}
+
+/* heros */
+.hero {
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 10%;
+    gap: 25px;
+}
+
+.hero-logo {
+    margin-bottom: 10px;
+}
+
+.hero-main-logo {
+    height: 120px;
+    filter: drop-shadow(0 0 20px rgba(173, 132, 78, 0.6));
+    transition: transform 0.4s ease;
+}
+
+.hero-main-logo:hover {
+    transform: scale(1.06);
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight:800;
+    letter-spacing:-1px;
+    line-height: 1.1;
+}
+
+.hero p {
+    margin-top: 10px;
+    color:var(--text-dim);
+    max-width:620px;
+    font-size: 1.15rem;
+}
+
+.btn {
+    margin-top:20px;
+    padding:14px 36px;
+    border-radius:999px;
+    background:#000000;
+    color:rgb(255, 255, 255);
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover {
+    transform:scale(1.05);
+    background: #222;
+}
+
+/* gcnt */
+.services {
+    padding:80px 8%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 35px 30px;
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+    transition: transform 0.3s ease;
+}
+
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.2s; }
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h3 {
+    font-size:1.35rem;
+    margin-bottom:12px;
+    color: #111;
+}
+
+.card p {
+    color:var(--text-dim);
+    line-height: 1.5;
+}
+
+/* ft */
+footer {
+    padding:50px 8% 30px;
+    text-align:center;
+    color:var(--text-dim);
+    font-size: 0.95rem;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="logo-container">
+        <img src="https://media.discordapp.net/attachments/1478482034828775507/1490286858771632218/miavelogoczarne.png?ex=69d3814b&is=69d22fcb&hm=b2fc1130eb65e7a4c03170c0734075669cbfdf6da67bb48b4d99b6fe529f21d5&=&format=webp&quality=lossless" alt="MiamVE Logo" class="main-logo">
+        <span class="logo-text">MiamVE</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="uslugi.html">Usługi</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="zespol.html">Zespół</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-logo">
+        <img src="https://media.discordapp.net/attachments/1478482034828775507/1490286858771632218/miavelogoczarne.png?ex=69d3814b&is=69d22fcb&hm=b2fc1130eb65e7a4c03170c0734075669cbfdf6da67bb48b4d99b6fe529f21d5&=&format=webp&quality=lossless" alt="MiamVE Logo" class="hero-main-logo">
+    </div>
+
+    <h1>Web & Software<br>Development</h1>
+    <p>Kodujemy Twoją wizję w nowoczesnym stylu</p>
+    <a href="kontakt.html" class="btn">Kontakt</a>
+</section>
+
+<section class="services">
+    <div class="card">
+        <h3>Web Development</h3>
+        <p>Szybkie i responsywne strony w nowoczesnym stylu.</p>
+    </div>
+    <div class="card">
+        <h3>Software Development</h3>
+        <p>Pełna funkcjonalność i wydajność na każdym urządzeniu.</p>
+    </div>
+    <div class="card">
+        <h3>UI/UX Design</h3>
+        <p>Prosty, elegancki design.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 MiamVE
+</footer>
+
+</body>
+</html>
+
+<!--
+     ███╗   ███╗██╗ █████╗ ███╗   ███╗██╗   ██╗███████╗
+     ████╗ ████║██║██╔══██╗████╗ ████║██║   ██║██╔════╝
+     ██╔████╔██║██║███████║██╔████╔██║██║   ██║█████╗  
+     ██║╚██╔╝██║██║██╔══██║██║╚██╔╝██║╚██╗ ██╔╝██╔══╝  
+     ██║ ╚═╝ ██║██║██║  ██║██║ ╚═╝ ██║ ╚████╔╝ ███████╗
+     ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═══╝  ╚══════╝
+           New era of web & software development
+ -->
