@@ -1,197 +1,423 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kontakt | MiamVE</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-:root {
-    --bg: #ffffff;
-    --glass: rgba(255, 255, 255, 0.322);
-    --border: rgba(0,0,0,0.08);
-    --text: #111;
-    --text-dim: #666;
-    --accent: #ad844e;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Kontakt | Fundacja Miam</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            -webkit-user-select: none;
+        }
 
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        body {
+            background-color: #7a7a7a;
+            font-family: 'Inter', sans-serif;
+            color: #000000;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: radial-gradient(circle at 50% -20%, #ad844e, #fcfcfc 100%);
-    color: var(--text);
-    line-height: 1.6;
-    padding-top: 100px;
-    min-height: 100vh;
-}
+        a, button, .btn, .btn-light, .btn-dark, .btn-outline {
+            cursor: pointer;
+        }
 
-/* navsy */
-nav {
-    position: fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    backdrop-filter: blur(20px);
-    background: #866b4a00;
-    border-bottom:1px solid var(--border);
-    z-index: 1000;
-}
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0 20px 0;
+            flex-wrap: wrap;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
 
-.main-logo {
-    height: 40px;
-    filter: drop-shadow(0 0 8px var(--accent));
-}
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
 
-.logo-text {
-    font-weight:800;
-    font-size:1.55rem;
-    letter-spacing:-0.5px;
-    color: var(--accent);
-}
+        .logo-img {
+            height: 52px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
 
-.nav-links {
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
+        .brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #000000;
+        }
 
-.nav-links a {
-    text-decoration:none;
-    color:var(--text-dim);
-    font-weight:500;
-}
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            list-style: none;
+        }
 
-.nav-links a:hover,
-.nav-links a[style*="accent"] {
-    color:var(--text);
-}
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #000000;
+            transition: 0.2s;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+        }
 
-/* cnt */
-.container {
-    max-width: 520px;
-    margin: 0 auto;
-    padding: 40px 20px;
-}
+        .nav-links a:hover {
+            border-bottom-color: #000000;
+        }
 
-.contact-card {
-    background: var(--glass);
-    backdrop-filter: blur(22px);
-    border: 1px solid var(--border);
-    border-radius: 32px;
-    padding: 55px 45px;
-    text-align: center;
-    box-shadow: 0 15px 40px rgba(173, 132, 78, 0.12);
-}
+        .contact-hero {
+            text-align: center;
+            padding: 40px 20px 30px 20px;
+        }
 
-.contact-card h1 {
-    font-size: 2.55rem;
-    font-weight: 800;
-    color: #111;
-    margin-bottom: 22px;
-    letter-spacing: -0.8px;
-}
+        .contact-hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #000000;
+            margin-bottom: 12px;
+        }
 
-.contact-card p {
-    color: var(--text-dim);
-    margin-bottom: 40px;
-    font-size: 1.08rem;
-    max-width: 420px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        .contact-hero p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #111;
+        }
 
-.contact-methods {
-    list-style: none;
-    text-align: left;
-    max-width: 400px;
-    margin: 0 auto 35px;
-}
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin: 40px 0 60px;
+        }
 
-.contact-methods li {
-    margin: 18px 0;
-    padding: 16px 22px;
-    background: rgba(255, 255, 255, 0.75);
-    border-left: 4px solid var(--accent);
-    border-radius: 12px;
-    color: var(--text);
-    font-size: 1.05rem;
-}
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+            background: #ffffff;
+            border-radius: 36px;
+            padding: 2rem;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d0d0d0;
+        }
 
-.contact-methods li strong {
-    color: var(--accent);
-}
+        .contact-info h2, .contact-form-box h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #000000;
+            border-left: 5px solid #000;
+            padding-left: 16px;
+        }
 
-/* back */
-.back-btn {
-    display: inline-block;
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: 0.3s;
-}
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
 
-.back-btn:hover {
-    transform: translateX(-4px);
-}
-</style>
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1f1f1f;
+        }
+
+        .info-item i {
+            width: 32px;
+            font-size: 1.4rem;
+            color: #000000;
+        }
+
+        .map-placeholder {
+            background: #e0e0e0;
+            border-radius: 28px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid #aaa;
+        }
+
+        .map-placeholder i {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contact-form-box {
+            flex: 1.5;
+            min-width: 320px;
+            background: #ffffff;
+            border-radius: 36px;
+            padding: 2rem;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d0d0d0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: #f5f5f5;
+            border: 1px solid #b0b0b0;
+            border-radius: 28px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: 0.2s;
+            user-select: text;
+            -webkit-user-select: text;
+            color: #000;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #000000;
+            background: #ffffff;
+        }
+
+        .submit-btn {
+            background: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: #2c2c2c;
+            transform: scale(0.98);
+        }
+
+        .social-proof {
+            margin-top: 30px;
+            background: rgba(0,0,0,0.05);
+            border-radius: 28px;
+            padding: 15px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .social-proof i {
+            margin: 0 8px;
+            font-size: 1.2rem;
+        }
+
+        .mission-block {
+            background: #ffffffcc;
+            backdrop-filter: blur(6px);
+            border-radius: 48px;
+            padding: 40px 28px;
+            margin: 20px 0 50px;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        footer {
+            border-top: 1px solid #2c2c2c50;
+            text-align: center;
+            padding: 32px 0;
+            margin-top: 20px;
+            color: #111;
+            font-weight: 500;
+        }
+
+        @media (max-width: 780px) {
+            .navbar {
+                flex-direction: column;
+                gap: 16px;
+            }
+            .nav-links {
+                gap: 1.5rem;
+            }
+            .contact-hero h1 {
+                font-size: 2.4rem;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html" class="logo-container">
-        <img src="miam.png" 
-             alt="MiamVE Logo" 
-             class="main-logo">
-        <span class="logo-text">MiamVE</span>
-    </a>
-<ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="uslugi.html">Usługi</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="zespol.html">Zespół</a></li>
-    </ul>
-</nav>
-
 <div class="container">
-    <div class="contact-card">
-        <h1>Skontaktuj się</h1>
-        <p>Chciałbyś abyśmy przygotowali dla Ciebie stronę internetową lub aplikację? Napisz do nas!</p>
-        
-        <ul class="contact-methods">
-            <li>📧 Email: <strong>miamve@proton.me</strong></li>
-            <li>💬 Discord: <strong>https://discord.gg/MdK7EwYAED</strong></li>
-            <li>💎 Zynced: <strong>MiamVE</strong></li>
-        </ul>
+    <header>
+        <div class="navbar">
+            <div class="logo-area">
+                <img src="miam.png" alt="Fundacja Miam logo" class="logo-img" onerror="this.onerror=null; this.src='https://placehold.co/300x100?text=MIAM&bgColor=7a7a7a&textColor=000'">
+                <span class="brand">Fundacja Miam</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Główna</a></li>
+                <li><a href="pomoc.html">Pomoc</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
 
-        <a href="index.html" class="back-btn">← Powrót do strony głównej</a>
-    </div>
+    <main>
+        <div class="contact-hero">
+            <h1>Kontakt (w trakcie budowy)</h1>
+            <p>Jesteśmy dla Ciebie – napisz, zadzwoń lub wypełnij formularz. Odpowiadamy szybko i dyskretnie.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2><i class="fas fa-address-card"></i> Dane kontaktowe</h2>
+                <div class="info-list">
+                    <div class="info-item"><i class="fas fa-envelope"></i> <span>miamfund@proton.me</span></div>
+                    <div class="info-item"><i class="fas fa-phone-alt"></i> <span>tymczasowy brak</span></div>
+                </div>
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p><strong>W trakcie budowy:</strong> ⌨︎ </p>
+                    <p style="font-size: 0.85rem; margin-top: 8px;">W razie pilnej sprawy – skorzystaj z formularza lub zadzwoń.</p>
+                </div>
+                <div class="social-proof">
+                    <i class="fas fa-shield-alt"></i> Gwarantujemy poufność <i class="fas fa-lock"></i>
+                </div>
+            </div>
+
+            <div class="contact-form-box">
+                <h2><i class="fas fa-paper-plane"></i> Napisz do nas</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Imię i nazwisko</label>
+                        <input type="text" id="name" placeholder="Jan Kowalski" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Adres e-mail</label>
+                        <input type="email" id="email" placeholder="jan@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Temat</label>
+                        <input type="text" id="subject" placeholder="np. Pomoc psychologiczna, zgłoszenie...">
+                    </div>
+                    <div class="form-group">
+                        <label>Wiadomość</label>
+                        <textarea rows="5" id="message" placeholder="Opisz swoją sprawę – postaramy się odpowiedzieć najszybciej jak to możliwe." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Wyślij wiadomość</button>
+                    <p style="font-size: 0.7rem; margin-top: 16px; text-align: center; color: #2c2c2c;">✔ Wszystkie dane są chronione. Nie udostępniamy ich osobom trzecim.</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="mission-block">
+            <i class="fas fa-handshake" style="font-size: 2.2rem; color: #000; margin-bottom: 8px;"></i>
+            <h3 style="font-weight: 800; font-size: 1.5rem;">Potrzebujesz natychmiastowej pomocy?</h3>
+            <p style="max-width: 600px; margin: 12px auto 0;">Zadzwoń na infolinię: 664 974 935 <strong></strong> (pn.-pt. 10-18). W sytuacji kryzysowej zachęcamy do kontaktu mailowego – odpowiadamy w ciągu 24h.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Fundacja Miamve </p>
+    </footer>
 </div>
 
+<script>
+    (function() {
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('name')?.value.trim();
+                const email = document.getElementById('email')?.value.trim();
+                const msg = document.getElementById('message')?.value.trim();
+                if (!name || !email || !msg) {
+                    showToast('❌ Wypełnij wszystkie wymagane pola (imię, email, wiadomość).', '#222');
+                    return;
+                }
+                if (!email.includes('@') || !email.includes('.')) {
+                    showToast('📧 Podaj poprawny adres e-mail.', '#222');
+                    return;
+                }
+                showToast('✅ Wiadomość została wysłana! Odpowiemy najszybciej jak to możliwe.', '#1f3b2c');
+                form.reset();
+            });
+        }
+
+        function showToast(message, bgColor) {
+            const toast = document.createElement('div');
+            toast.innerText = message;
+            toast.style.position = 'fixed';
+            toast.style.bottom = '28px';
+            toast.style.left = '50%';
+            toast.style.transform = 'translateX(-50%)';
+            toast.style.backgroundColor = bgColor || '#111';
+            toast.style.color = '#fff';
+            toast.style.padding = '14px 28px';
+            toast.style.borderRadius = '60px';
+            toast.style.fontSize = '0.9rem';
+            toast.style.fontWeight = '500';
+            toast.style.fontFamily = 'Inter, sans-serif';
+            toast.style.boxShadow = '0 8px 20px rgba(0,0,0,0.3)';
+            toast.style.border = '1px solid #aaa';
+            toast.style.zIndex = '999';
+            toast.style.backdropFilter = 'blur(4px)';
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s';
+                setTimeout(() => toast.remove(), 400);
+            }, 3200);
+        }
+
+        const emailItem = document.querySelector('.info-item:first-child');
+        if (emailItem) {
+            emailItem.style.cursor = 'pointer';
+            emailItem.addEventListener('click', () => {
+                const emailSpan = emailItem.querySelector('span');
+                if (emailSpan) {
+                    const email = emailSpan.innerText;
+                    navigator.clipboard.writeText(email).then(() => {
+                        showToast('📋 Skopiowano adres email: ' + email, '#2c2c2c');
+                    }).catch(() => {
+                        showToast('⚠️ Nie udało się skopiować ręcznie', '#5a3a2a');
+                    });
+                }
+            });
+        }
+    })();
+</script>
 </body>
 </html>
-
-<!--
-     ███╗   ███╗██╗ █████╗ ███╗   ███╗██╗   ██╗███████╗
-     ████╗ ████║██║██╔══██╗████╗ ████║██║   ██║██╔════╝
-     ██╔████╔██║██║███████║██╔████╔██║██║   ██║█████╗  
-     ██║╚██╔╝██║██║██╔══██║██║╚██╔╝██║╚██╗ ██╔╝██╔══╝  
-     ██║ ╚═╝ ██║██║██║  ██║██║ ╚═╝ ██║ ╚████╔╝ ███████╗
-     ╚═╝     ╚═╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═══╝  ╚══════╝
-           New era of web & software development
- -->
