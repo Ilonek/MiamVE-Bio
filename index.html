@@ -1,475 +1,462 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Miam Foundation | Oficjalna strona</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
-        body {
-            background-color: #7a7a7a;
-            font-family: 'Inter', sans-serif;
-            color: #000000;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
-
-        a, button, .btn, .btn-light, .btn-dark, .btn-outline {
-            cursor: pointer;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        /* HEADER */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 0 20px 0;
-            flex-wrap: wrap;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .logo-img {
-            height: 52px;
-            width: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-        }
-
-        .brand {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: #000000;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #000000;
-            transition: 0.2s;
-            padding: 6px 0;
-            border-bottom: 2px solid transparent;
-        }
-
-        .nav-links a:hover {
-            border-bottom-color: #000000;
-        }
-
-        /* SEKCJA GŁÓWNA */
-        .hero {
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px 70px 20px;
-        }
-
-        .hero-logo {
-            margin-bottom: 20px;
-        }
-
-        .hero-logo-img {
-            max-height: 100px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .main-heading {
-            font-size: 4rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: #000000;
-            margin: 0.2em 0;
-        }
-
-        .catch-phrase {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #000000;
-            margin-top: 0.8rem;
-            margin-bottom: 1.8rem;
-        }
-
-        /* LICZNIK W KOLE */
-        .counter-circle-wrapper {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .counter-circle {
-            width: 230px;
-            height: 230px;
-            background: #000000;
-            border-radius: 50%;
-            box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.4);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 3px solid #ffffff90;
-        }
-
-        .counter-number {
-            font-size: 4.5rem;
-            font-weight: 800;
-            color: #7a7a7a;
-            line-height: 1;
-            letter-spacing: -2px;
-        }
-
-        .counter-label {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 700;
-            color: #c0c0c0;
-            margin-top: 8px;
-            text-align: center;
-            padding: 0 10px;
-        }
-
-        .hero-description {
-            margin-top: 36px;
-            max-width: 600px;
-            font-size: 1rem;
-            font-weight: 500;
-            background: rgba(0, 0, 0, 0.1);
-            padding: 10px 24px;
-            border-radius: 60px;
-            backdrop-filter: blur(2px);
-        }
-
-        /* KARTY */
-        .sections {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin: 30px 0 60px 0;
-        }
-
-        .card {
-            background: #ffffff;
-            border-radius: 36px;
-            padding: 2rem 2rem;
-            flex: 1;
-            min-width: 280px;
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-            transition: all 0.25s;
-            border: 1px solid #d0d0d0;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 24px 40px -12px black;
-        }
-
-        .card-icon {
-            font-size: 2.6rem;
-            color: #000000;
-            margin-bottom: 1.2rem;
-        }
-
-        .card h3 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: #000000;
-        }
-
-        .card p {
-            color: #2c2c2c;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .contact-details {
-            margin-top: 1.2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.95rem;
-            color: #000000;
-            font-weight: 500;
-        }
-
-        .contact-item i {
-            width: 28px;
-            color: #000000;
-        }
-
-        /* UJEDNOLICONE STYLE GŁÓWNYCH PRZYCISKÓW */
-        .btn-light, .btn-dark, .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-light {
-            background: #e0e0e0;
-            border: 1px solid #a0a0a0;
-            color: #000000;
-        }
-
-        .btn-light:hover {
-            background: #cacaca;
-            transform: scale(0.97);
-        }
-
-        .btn-dark {
-            background: #000000;
-            color: #ffffff;
-        }
-
-        .btn-dark:hover {
-            background: #2c2c2c;
-            transform: scale(0.97);
-        }
-
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #000000;
-            color: #000000;
-        }
-
-        .btn-outline:hover {
-            background: #000000;
-            color: #ffffff;
-        }
-
-        /* większy odstęp przed przyciskami w kartach */
-        .card .btn-dark, .card .btn-light, .card .btn-outline {
-            margin-top: 1.5rem;
-        }
-
-        .badge-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 18px 0 0;
-        }
-
-        .badge {
-            background: #eeeeee;
-            padding: 5px 14px;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            color: #111;
-        }
-
-        .mission-block {
-            background: #ffffffcc;
-            backdrop-filter: blur(6px);
-            border-radius: 48px;
-            padding: 40px 28px;
-            margin: 20px 0 50px;
-            text-align: center;
-            border: 1px solid rgba(0,0,0,0.1);
-        }
-
-        footer {
-            border-top: 1px solid #2c2c2c50;
-            text-align: center;
-            padding: 32px 0;
-            margin-top: 20px;
-            color: #111;
-            font-weight: 500;
-        }
-
-        @media (max-width: 780px) {
-            .navbar {
-                flex-direction: column;
-                gap: 16px;
-            }
-            .nav-links {
-                gap: 1.5rem;
-            }
-            .main-heading {
-                font-size: 2.6rem;
-            }
-            .catch-phrase {
-                font-size: 1.3rem;
-            }
-            .counter-circle {
-                width: 170px;
-                height: 170px;
-            }
-            .counter-number {
-                font-size: 3rem;
-            }
-            .container {
-                padding: 0 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miamve</title>
+  <meta name="description" content="Miamve — niezależna firma technologiczna. Tworzymy MiamOS i mOS." />
+  <link rel="icon" type="image/png" href="ikony/miamlogo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div class="container">
-    <header>
-        <div class="navbar">
-            <div class="logo-area">
-                <img src="miam.png" alt="Miam Foundation logo" class="logo-img" onerror="this.onerror=null; this.src='https://placehold.co/300x100?text=MIAM&bgColor=7a7a7a&textColor=000'">
-                <span class="brand">Fundacja Miam</span>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">
+        <img src="ikony/miamlogo.png" alt="Miamve" class="logo-mark" />
+        Miamve
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">O nas</a></li>
+        <li><a href="#projects">MiamOS</a></li>
+        <li><a href="#showcase">mOS</a></li>
+        <li><a href="#roadmap">Przyszłość</a></li>
+        <li><a href="#contact">Kontakt</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Zmień motyw">
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="#contact" class="nav-cta">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="badge reveal">
+        <span class="badge-dot"></span>
+        MiamOS 29.11
+      </div>
+      <h1 class="hero-title reveal">
+        By ulepszyć<br />
+        <span class="glow-text">twój</span> dzień
+      </h1>
+      <p class="hero-sub reveal">
+        Tworzymy produkty by zwiększyć twoją przyjemność z pracy oraz rozrywki.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">Zobacz projekty</a>
+        <a href="#about" class="btn btn-ghost">Poznaj nas</a>
+      </div>
+
+      <div class="hero-mock reveal">
+        <div class="mock-window glass">
+          <div class="mock-bar">
+            <span class="dot r"></span>
+            <span class="dot y"></span>
+            <span class="dot g"></span>
+          </div>
+          <div class="mock-body">
+            <aside class="mock-side">
+              <div class="mock-line w-70"></div>
+              <div class="mock-line w-50"></div>
+              <div class="mock-line w-60"></div>
+              <div class="mock-line w-40"></div>
+            </aside>
+            <div class="mock-main">
+              <div class="mock-hero"></div>
+              <div class="mock-grid">
+                <div class="mock-tile"></div>
+                <div class="mock-tile"></div>
+                <div class="mock-tile"></div>
+              </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="/">Główna</a></li>
-<li><a href="/pomoc">Pomoc</a></li>
-<li><a href="/kontakt">Kontakt</a></li>
-            </ul>
+          </div>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main>
-        <section id="glowna" class="hero">
-            <div class="hero-logo">
-                <img src="miam.png" alt="Miam Foundation logo" class="hero-logo-img" onerror="this.onerror=null; this.src='https://placehold.co/300x100?text=MIAM&bgColor=7a7a7a&textColor=000'">
-            </div>
-            <h1 class="main-heading">Fundacja Miam</h1>
-            <div class="catch-phrase">złapaliśmy już</div>
-            <div class="counter-circle-wrapper">
-                <div class="counter-circle">
-                    <span class="counter-number" id="dynamicCounter">1</span>
-                    <span class="counter-label">przestępców seksualnych</span>
-                </div>
-            </div>
-            <div class="hero-description">
-                <i class="fas fa-shield-alt"></i> Twoje zgłoszenie pomaga innym. Nie bój się zgłaszać przestępców seksualnych.
-            </div>
-        </section>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-inner">
+      <p class="eyebrow reveal">O nas</p>
+      <h2 class="section-title reveal">
+        Czym się zajmujemy i co <span class="gradient-text">tworzymy?</span>
+      </h2>
+      <p class="section-lead reveal">
+        Miamve to grupa tworząca zaawansowane systemy operacyjne, aplikacje oraz ekosystemy dla naszych klientów.
+      </p>
 
-        <div id="kategorie" style="scroll-margin-top: 30px;"></div>
-        <div class="sections">
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                <h3>Obszary pomocy</h3>
-                <p>Pomoc psychologiczna, interwencje prawne, zgłaszanie nielegalnych treści, wsparcie dla ofiar. Działamy szybko i anonimowo.</p>
-                <div class="badge-group">
-                    <span class="badge">Psychologia</span>
-                    <span class="badge">Pomoc prawna</span>
-                    <span class="badge">Bezpieczeństwo</span>
-                    <span class="badge">Zgłoszenia</span>
+      <div class="pillars">
+        <div class="pillar glass reveal">
+          <div class="pillar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="M183.5-183.5Q160-207 160-240t23.5-56.5Q207-320 240-320t56.5 23.5Q320-273 320-240t-23.5 56.5Q273-160 240-160t-56.5-23.5Zm0-240Q160-447 160-480t23.5-56.5Q207-560 240-560t56.5 23.5Q320-513 320-480t-23.5 56.5Q273-400 240-400t-56.5-23.5Zm0-240Q160-687 160-720t23.5-56.5Q207-800 240-800t56.5 23.5Q320-753 320-720t-23.5 56.5Q273-640 240-640t-56.5-23.5Zm240 0Q400-687 400-720t23.5-56.5Q447-800 480-800t56.5 23.5Q560-753 560-720t-23.5 56.5Q513-640 480-640t-56.5-23.5Zm240 0Q640-687 640-720t23.5-56.5Q687-800 720-800t56.5 23.5Q800-753 800-720t-23.5 56.5Q753-640 720-640t-56.5-23.5Zm-240 240Q400-447 400-480t23.5-56.5Q447-560 480-560t56.5 23.5Q560-513 560-480t-23.5 56.5Q513-400 480-400t-56.5-23.5ZM520-160v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z"/></svg>
+          </div>
+          <h3>Projektujemy</h3>
+          <p>Interfejsy, systemy i doświadczenia z dbałością o każdy detal.</p>
+        </div>
+        <div class="pillar glass reveal">
+          <div class="pillar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="m384-336 56-57-87-87 87-87-56-57-144 144 144 144Zm192 0 144-144-144-144-56 57 87 87-87 87 56 57ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+          </div>
+          <h3>Budujemy</h3>
+          <p>Tworzymy to co zaprojektowaliśmy z dbałością o każdy szczegół.</p>
+        </div>
+        <div class="pillar glass reveal">
+          <div class="pillar-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="currentColor"><path d="m680-80-12-60q-12-5-22.5-10.5T624-164l-58 18-40-68 46-40q-2-12-2-26t2-26l-46-40 40-68 58 18q11-8 21.5-13.5T668-420l12-60h80l12 60q12 5 22.5 10.5T816-396l58-18 40 68-46 40q2 12 2 26t-2 26l46 40-40 68-58-18q-11 8-21.5 13.5T772-140l-12 60h-80Zm96.5-143.5Q800-247 800-280t-23.5-56.5Q753-360 720-360t-56.5 23.5Q640-313 640-280t23.5 56.5Q687-200 720-200t56.5-23.5ZM160-240v-480 172-12 320Zm0 80q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v131q-18-13-38-22.5T800-548v-92H447l-80-80H160v480h283q3 21 9.5 41t15.5 39H160Z"/></svg>
+          </div>
+          <h3>Rozwijamy</h3>
+          <p>Rozwijamy nasze produkty, tak by zawsze były jak najlepsze.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section section-alt" id="projects">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Projekty</p>
+      <h2 class="section-title reveal">
+        To, nad czym <span class="gradient-text">pracujemy</span>
+      </h2>
+      <p class="section-lead reveal">
+        Dwa systemy, dużo aplikacji, jedna wizja.
+      </p>
+
+      <!-- MiamOS — komputer -->
+      <article class="project project-featured glass reveal">
+        <div class="project-content">
+          <span class="project-tag">System komputerowy
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M288-144v-48l48-48H168q-29.7 0-50.85-21.15Q96-282.3 96-312v-432q0-29.7 21.15-50.85Q138.3-816 168-816h624q29.7 0 50.85 21.15Q864-773.7 864-744v432q0 29.7-21.15 50.85Q821.7-240 792-240H624l48 48v48H288ZM168-312h624v-432H168v432Zm0 0v-432 432Z"/></svg>
+          </span>
+          <h3 class="project-title">MiamOS</h3>
+          <p class="project-desc">
+            Komputerowy system operacyjny stawiający na prywatność oraz wygodę.
+          </p>
+          <div class="project-meta">
+            <span class="project-status active">W trakcie prac</span>
+            <span class="project-year"></span>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="desktop">
+            <div class="desktop-screen">
+              <div class="desktop-menubar">
+                <span class="desktop-logo"></span>
+                <span class="desktop-menu-item">Plik</span>
+                <span class="desktop-menu-item">Edycja</span>
+                <span class="desktop-menu-item">Widok</span>
+                <span class="desktop-menu-spacer"></span>
+                <span class="desktop-clock">13:05</span>
+              </div>
+              <div class="desktop-icons">
+                <div class="desktop-icon">
+                  <img src="ikony/icon_01.png" alt="" />
+                  <span>Dokumenty</span>
                 </div>
-                <a href="pomoc.html" class="btn-dark"><i class="fas fa-arrow-right"></i> Przejdź do pomocy</a>
+                <div class="desktop-icon">
+                  <img src="ikony/icon_02.png" alt="" />
+                  <span>Kalendarz</span>
+                </div>
+                <div class="desktop-icon">
+                  <img src="ikony/icon_03.png" alt="" />
+                  <span>Zdjęcia</span>
+                </div>
+                <div class="desktop-icon">
+                  <img src="ikony/icon_04.png" alt="" />
+                  <span>Wiadomości</span>
+                </div>
+              </div>
+              <div class="desktop-dock">
+                <div class="desktop-dock-icon"><img src="ikony/icon_05.png" alt="" /></div>
+                <div class="desktop-dock-icon"><img src="ikony/icon_06.png" alt="" /></div>
+                <div class="desktop-dock-icon"><img src="ikony/icon_07.png" alt="" /></div>
+                <div class="desktop-dock-icon"><img src="ikony/icon_08.png" alt="" /></div>
+                <div class="desktop-dock-icon"><img src="ikony/icon_09.png" alt="" /></div>
+                <div class="desktop-dock-icon"><img src="ikony/icon_10.png" alt="" /></div>
+              </div>
+            </div>
+            <div class="desktop-stand"></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- mOS — mini telefon -->
+      <article class="project project-featured glass reveal">
+        <div class="project-content">
+          <span class="project-tag">System na telefon
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="currentColor"><path d="M288-48q-29.7 0-50.85-21.15Q216-90.3 216-120v-720q0-33 19.5-52.5T288-912h384q29.7 0 50.85 21.15Q744-869.7 744-840v144q20 0 34 14t14 34v96q0 20-14 34t-34 14v384q0 29.7-21.15 50.85Q701.7-48 672-48H288Zm0-72h384v-720H288v720Zm0 0v-720 720Zm108-48h168q15.3 0 25.65-10.29Q600-188.58 600-203.79t-10.35-25.71Q579.3-240 564-240H396q-15.3 0-25.65 10.29Q360-219.42 360-204.21t10.35 25.71Q380.7-168 396-168Z"/></svg>
+          </span>
+          <h3 class="project-title">mOS</h3>
+          <p class="project-desc">
+            Mobilny system operacyjny zaprojektowany z myślą o szybkości oraz wygodnym użytku.
+          </p>
+          <div class="project-meta">
+            <span class="project-status active">W trakcie prac</span>
+            <span class="project-year"></span>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="phone phone-mini">
+            <div class="phone-screen">
+              <div class="status-bar">
+                <span class="status-time">13:05</span>
+                <span class="status-icons">
+                  <span class="sig"></span>
+                  <span class="wifi"></span>
+                  <span class="battery"></span>
+                </span>
+              </div>
+              <div class="app-grid">
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_01.png" alt="" /></div>
+                  <span class="app-label">Dokumenty</span>
+                </div>
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_02.png" alt="" /></div>
+                  <span class="app-label">Kalendarz</span>
+                </div>
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_03.png" alt="" /></div>
+                  <span class="app-label">Zdjęcia</span>
+                </div>
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_04.png" alt="" /></div>
+                  <span class="app-label">Wiadomości</span>
+                </div>
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_05.png" alt="" /></div>
+                  <span class="app-label">oMeet</span>
+                </div>
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_06.png" alt="" /></div>
+                  <span class="app-label">Notatki</span>
+                </div>
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_07.png" alt="" /></div>
+                  <span class="app-label">Arkusze</span>
+                </div>
+                <div class="app">
+                  <div class="app-icon"><img src="ikony/icon_08.png" alt="" /></div>
+                  <span class="app-label">mMail</span>
+                </div>
+              </div>
+              <div class="dock">
+                <div class="app-icon small"><img src="ikony/icon_09.png" alt="" /></div>
+                <div class="app-icon small"><img src="ikony/icon_10.png" alt="" /></div>
+                <div class="app-icon small"><img src="ikony/icon_11.png" alt="" /></div>
+                <div class="app-icon small"><img src="ikony/icon_12.png" alt="" /></div>
+              </div>
+              <div class="home-indicator"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <div class="projects-grid">
+        <article class="project-card glass reveal">
+          <span class="project-tag">Wkrótce</span>
+          <h3>Miam Office Pack</h3>
+          <p>Pierwsze narzędzia biurowe.</p>
+        </article>
+        <article class="project-card glass reveal">
+          <span class="project-tag">W niedalekiej przyszłości</span>
+          <h3>mCloud</h3>
+          <p>Chmura z pełną synchronizacją między urządzeniami.</p>
+        </article>
+        <article class="project-card glass reveal">
+          <span class="project-tag">W planach</span>
+          <h3>Dom dla mOS</h3>
+          <p>Pierwsze prace nad modułami mobilnymi pierwszego smartfona.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE — mOS -->
+  <section class="section" id="showcase">
+    <div class="section-inner">
+      <p class="eyebrow reveal">mOS</p>
+      <h2 class="section-title reveal">
+        Tak będzie <span class="gradient-text">wyglądać</span>
+      </h2>
+      <p class="section-lead reveal">
+        Piękny. Nowoczesny. Szybki. Bezpieczny.
+      </p>
+
+      <div class="showcase-stage reveal">
+
+        <div class="phone">
+          <div class="phone-screen">
+
+            <div class="status-bar">
+              <span class="status-time">13:05</span>
+              <span class="status-icons">
+                <span class="sig"></span>
+                <span class="wifi"></span>
+                <span class="battery"></span>
+              </span>
             </div>
 
-            <div class="card">
-                <div class="card-icon"><i class="fas fa-envelope-open-text"></i></div>
-                <h3>Kontakt</h3>
-                <div class="contact-details">
-                    <div class="contact-item"><i class="fas fa-envelope"></i> <span>miamfund@proton.me</span></div>
-                    <div class="contact-item"><i class="fas fa-phone-alt"></i> <span>664 974 935</span></div>
-                </div>
-                <a href="kontakt.html" class="btn-dark"><i class="fas fa-comment"></i> Formularz i dane</a>
-                <span id="copyFeedback" style="font-size: 0.7rem; margin-left: 8px; display: inline-block; margin-top: 10px;"></span>
+            <div class="app-grid">
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_01.png" alt="" /></div>
+                <span class="app-label">Dokumenty</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_02.png" alt="" /></div>
+                <span class="app-label">Kalendarz</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_03.png" alt="" /></div>
+                <span class="app-label">Zdjęcia</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_04.png" alt="" /></div>
+                <span class="app-label">Wiadomości</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_05.png" alt="" /></div>
+                <span class="app-label">oMeet</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_06.png" alt="" /></div>
+                <span class="app-label">Notatki</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_07.png" alt="" /></div>
+                <span class="app-label">Arkusze</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_08.png" alt="" /></div>
+                <span class="app-label">mMail</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_09.png" alt="" /></div>
+                <span class="app-label">Sklep Aplikacji</span>
+              </div>
+              <div class="app">
+                <div class="app-icon"><img src="ikony/icon_10.png" alt="" /></div>
+                <span class="app-label">Ustawienia</span>
+              </div>
             </div>
+
+            <div class="dock">
+              <div class="app-icon small"><img src="ikony/icon_11.png" alt="" /></div>
+              <div class="app-icon small"><img src="ikony/icon_12.png" alt="" /></div>
+              <div class="app-icon small"><img src="ikony/icon_13.png" alt="" /></div>
+              <div class="app-icon small"><img src="ikony/icon_14.png" alt="" /></div>
+            </div>
+
+            <div class="home-indicator"></div>
+          </div>
         </div>
 
-        <div class="mission-block">
-            <i class="fas fa-balance-scale" style="font-size: 2.5rem; color: #000; margin-bottom: 12px;"></i>
-            <h3 style="font-weight: 800; font-size: 1.7rem;">Skuteczność i zaufanie</h3>
-            <p style="max-width: 760px; margin: 0 auto; font-weight: 500;">Tępimy działania pedofilskie. Wszelkie zgłoszenia oraz przypuszczenia traktujemy poważnie.</p>
+        <div class="showcase-copy">
+          <h3>Jeden telefon, wiele funkcji</h3>
+          <p>
+            <strong>mOS</strong> najnowszy system operacyjny stworzony <strong>dla użytkownika</strong>
+          </p>
+          <ul class="showcase-list">
+            <li><span class="dot-accent"></span> Nowoczesny</li>
+            <li><span class="dot-accent"></span> Łatwy w użytkowaniu</li>
+            <li><span class="dot-accent"></span> Spójny design i system</li>
+            <li><span class="dot-accent"></span> Pełny nowych, lepszych funkcji</li>
+          </ul>
         </div>
-    </main>
 
-    <footer>
-        <p>© 2026 Fundacja Miamve</p>
-    </footer>
-</div>
+      </div>
+    </div>
+  </section>
 
-<script>
-    (function() {
-        const counterSpan = document.getElementById('dynamicCounter');
-        if (counterSpan) {
-            counterSpan.innerText = '1';
-            const circle = document.querySelector('.counter-circle');
-            if (circle) {
-                circle.style.animation = 'gentlePop 0.3s ease-out';
-            }
-        }
+  <!-- ROADMAP -->
+  <section class="section section-alt" id="roadmap">
+    <div class="section-inner">
+      <p class="eyebrow reveal">Nasza przyszłość</p>
+      <h2 class="section-title reveal">
+        Dokąd <span class="gradient-text">zmierzamy</span>?
+      </h2>
 
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes gentlePop {
-                0% { transform: scale(0.94); opacity: 0.7; }
-                100% { transform: scale(1); opacity: 1; }
-            }
-        `;
-        document.head.appendChild(style);
+      <ol class="timeline">
+        <li class="timeline-item glass reveal done">
+          <span class="timeline-dot"></span>
+          <div>
+            <span class="timeline-tag">Zrobione</span>
+            <h3>Powstanie Miamve</h3>
+            <p>Zespół, pierwsze decyzje, kierunek rozwoju.</p>
+          </div>
+        </li>
+        <li class="timeline-item glass reveal active">
+          <span class="timeline-dot"></span>
+          <div>
+            <span class="timeline-tag">2027</span>
+            <h3>Pierwszy model mXO</h3>
+            <p>Prezentacja oraz testy naszego pierwszego telefonu.</p>
+          </div>
+        </li>
+        <li class="timeline-item glass reveal">
+          <span class="timeline-dot"></span>
+          <div>
+            <span class="timeline-tag">2028/2029</span>
+            <h3>Pierwszy szkic mOxa</h3>
+            <p>Pierwsze projekty oraz wzmianki o naszym pierwszym modelu komputera.</p>
+          </div>
+        </li>
+        <li class="timeline-item glass reveal">
+          <span class="timeline-dot"></span>
+          <div>
+            <span class="timeline-tag">Przyszłość</span>
+            <h3>Ekosystem Miam</h3>
+            <p>Aplikacje, chmura, kolejne urządzenia. To dopiero początek.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-        const copyBtnArea = document.querySelector('.card .contact-item:first-child');
-        const feedbackSpan = document.getElementById('copyFeedback');
-        if (copyBtnArea && feedbackSpan) {
-            const emailSpan = copyBtnArea.querySelector('span');
-            if (emailSpan) {
-                copyBtnArea.style.cursor = 'pointer';
-                copyBtnArea.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const email = emailSpan.innerText;
-                    navigator.clipboard.writeText(email).then(() => {
-                        feedbackSpan.innerText = '✓ skopiowano email!';
-                        setTimeout(() => feedbackSpan.innerText = '', 2000);
-                    }).catch(() => {
-                        feedbackSpan.innerText = '✗ błąd kopiowania';
-                        setTimeout(() => feedbackSpan.innerText = '', 1500);
-                    });
-                });
-            }
-        }
-    })();
-</script>
+  <!-- CONTACT -->
+  <section class="section section-cta" id="contact">
+    <div class="section-inner reveal">
+      <h2 class="cta-title">
+        Odezwij się do <span class="gradient-text">nas</span>
+      </h2>
+      <p class="section-lead center">
+        Chcesz pogadać o projekcie, współpracy albo po prostu się przywitać?
+        Zostaw maila, odezwiemy się.
+      </p>
+
+      <form class="waitlist-form" onsubmit="event.preventDefault(); this.classList.add('sent');">
+        <input type="email" placeholder="twój@email.com" required />
+        <button type="submit" class="btn btn-primary">Wyślij</button>
+      </form>
+      <p class="form-msg muted small">Dzięki! Odezwiemy się najszybciej jak możemy.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="logo">
+        <img src="ikony/miamlogo.png" alt="Miamve" class="logo-mark" />
+        Miamve
+      </span>
+      <p class="muted small">© <span id="year"></span> Miamve. Budujemy rzeczy, które zostają.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
