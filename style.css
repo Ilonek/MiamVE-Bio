@@ -106,9 +106,9 @@ button { font-family: inherit; }
   flex-shrink: 0;
   transition: filter .4s ease;
 }
-:root[data-theme="dark"] .logo-mark { filter: invert(1); }
+:root[data-theme="dark"] .logo-mark { filter: none; }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .logo-mark { filter: invert(1); }
+  :root:not([data-theme="light"]) .logo-mark { filter: none; }
 }
 
 .nav-links {
