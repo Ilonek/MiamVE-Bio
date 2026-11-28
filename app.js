@@ -33,3 +33,5 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 
 document.querySelectorAll(".anim").forEach((el) => observer.observe(el));
+
+Wyjeb całe "juz niedlugo miamofficepack" i te zdjecia i zamiast tego wstaw na tamtą całą przestrzeń gifa (ktorego ja sobioe potem zmienie na innego) i na tym gifie w lewym dolnym rogu ma byc napisa MiamOS. Wywal tez te wszytskie migające kropczeki itp bo to wyglada jakby to na 100% pisalo ai wiec wiesz
